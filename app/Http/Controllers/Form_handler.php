@@ -65,13 +65,13 @@ class form_handler extends Controller
     //         'name' => User::show_email($name)
     //     ]);
     // }
-    public function update($name){
-        // return $this->title;
-        return view('welcome', [
-            'name' => User::show_email($name)
-        ]);
-    }
-    public function store(Request $name){
+    // public function update($name){
+    //     // return $this->title;
+    //     return view('welcome', [
+    //         'name' => User::show_email($name)
+    //     ]);
+    // }
+    public function store(Request $request){
         // return $this->title;
         return ($request->input('name'));
     }

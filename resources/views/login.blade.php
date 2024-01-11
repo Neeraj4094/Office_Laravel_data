@@ -11,11 +11,11 @@
 </head>
 
 <body>
-    <h2 class="fixed p-1 w-full text-center z-30 bg-green-200">
-        @if(request()->session()->has('user_not_exist'))
-            {{request()->session()->get('user_not_exist')}}
-        @endif
-    </h2>
+    @if(request()->session()->has('user_not_exist'))
+      <h2 class="fixed py-2 font-bold w-full text-center z-30 bg-red-300">
+        {{request()->session()->get('user_not_exist')}}
+      </h2>
+    @endif
   <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
@@ -29,7 +29,7 @@
                 <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
                   <img src="../assets/images/logos/dark-logo.svg" width="180" alt="">
                 </a>
-                <p class="text-center">Your Social Campaigns</p>
+                
                 <form action="{{url('/')}}/login" method="post">
                   <div class="mb-3">
                     <label for="login_email" class="form-label">Username</label>
@@ -56,12 +56,12 @@
                         Remeber this Device
                       </label>
                     </div>
-                    <a class="text-primary fw-bold" href="./index.html">Forgot Password ?</a>
+                    <a class="text-primary fw-bold" href="{{url('/user_form')}}">Forgot Password ?</a>
                   </div>
                   <button class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign In</button>
                   <div class="d-flex align-items-center justify-content-center">
                     <p class="fs-4 mb-0 fw-bold">New to Modernize?</p>
-                    <a class="text-primary fw-bold ms-2" href="./authentication-register.html">Create an account</a>
+                    <a class="text-primary fw-bold ms-2" href="{{url('/user_form')}}">Create an account</a>
                   </div>
                 </form>
               </div>
