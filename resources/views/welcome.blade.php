@@ -17,6 +17,7 @@ $checkid = $userloggedin = 0;
       </h2>
     @endif --}}
 
+    
 <body>
     <div class="grid grid-cols-12 grid-rows-6 w-full h-full">
         <aside class=" row-span-6 col-span-2 border-r h-full sm:hidden lg:block">
@@ -24,7 +25,7 @@ $checkid = $userloggedin = 0;
         </aside>
         <main class="row-span-6 col-span-10  sm:col-span-12 lg:col-span-10 ">
             <div class="flex justify-between items-center border-b-2 py-2 px-2 ">
-                <p class="font-medium text-lg">Welcome Admin, <span class="font-bold">
+                <p class="font-medium text-lg">Welcome Admin,  <span class="font-bold">
                         
                     </span></p>
                 <div class="w-10 h-10 rounded-full border">

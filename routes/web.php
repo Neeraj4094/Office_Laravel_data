@@ -83,10 +83,6 @@ Route::get('/dashboard', function () {
     );
 });
 
-Route::get('/form', [Formdata::class,'userdata'] );
-Route::get('/user_form', [Formdata::class,'userdata'] );
-// Route::post('/register', [Formdata::class,'user_registration'] );
-Route::post('/user_data', [Formdata::class,'send_data']);
 
 Route::post('/login', [Formdata::class,'check_login_data']);
 Route::get('/dashboard', [Formdata::class,'fetch_all_user_data']);
@@ -94,4 +90,12 @@ Route::get('/dashboard', [Formdata::class,'fetch_all_user_data']);
 Route::post('/user/delete/{id}', [Formdata::class,'delete_user'])->name('user.delete');
 Route::post('/user/edit/{id}', [Formdata::class,'edit_user_data'])->name('user.update');
 Route::post('/user/update/{id}', [Formdata::class,'update_user_data'])->name('user.update_data');
+Route::post('/user_logout', [Formdata::class,'user_logout'])->name('user.user_logout');
 // Route::get('/user/delete/{id}', [Formdata::class,'delete_user'])->name('user_account.delete');
+
+Route::group(['middleware'=> "web"], function(){
+    Route::get('/form', [Formdata::class,'userdata'] );
+    Route::get('/user_form', [Formdata::class,'userdata'] );
+    Route::post('/user_data', [Formdata::class,'send_data']);
+    
+});

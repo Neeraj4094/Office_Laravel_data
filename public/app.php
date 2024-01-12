@@ -107,9 +107,8 @@
                 </li>
 
                 <li class="border bg-slate-100 px-2 py-2 pt-2 hover:text-slate-400 hover:bg-black rounded-lg relative">
-                    <form action="../admin_details/admin_logout" method="post">
+                    <form action="/user_logout" method="post">
                         <button class="flex items-center gap-2 ">
-                            <a href="../admin_details/admin_logout" class="absolute inset-0 z-10"></a>
                             <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                 fill="currentColor" aria-hidden="true">
                                 <path

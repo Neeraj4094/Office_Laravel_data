@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class UserModel extends Model
 {
     use HasFactory;
-    protected $table = "user_form_details";
+    protected $table = "users";
     protected $primarykey = "id";
 }

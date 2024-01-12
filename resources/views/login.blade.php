@@ -33,18 +33,18 @@
                 <form action="{{url('/')}}/login" method="post">
                   <div class="mb-3">
                     <label for="login_email" class="form-label">Username</label>
-                    <input type="email" name="login_email" class="form-control" id="login_email" value="{{old('login_email')}}" aria-describedby="emailHelp" >
+                    <input type="email" name="email" class="form-control" id="email" value="{{old('email')}}" aria-describedby="emailHelp" >
                     <small class="text-red-500">
-                      @error('login_email')
+                      @error('email')
                           {{$message}}
                       @enderror
                     </small>
                   </div>
                   <div class="mb-4">
                     <label for="login_password" class="form-label">Password</label>
-                    <input type="password" name="login_password" class="form-control" id="login_password" value="{{old('login_password')}}" >
+                    <input type="password" name="password" class="form-control" id="password" value="{{old('password')}}" >
                     <small class="text-red-500">
-                        @error('login_password')
+                        @error('password')
                             {{$message}}
                         @enderror
                     </small>
